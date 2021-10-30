@@ -7,19 +7,45 @@ import Header from '../Header/Header';
 import Support from '../Support/Support';
 import Understanding from '../Understanding/Understanding';
 import Feedback from '../Feedback/Feedback';
+import { Route, HashRouter as Router, Link } from 'react-router-dom';
+
 
 function App() {
 
   return (
-    <div className='App'>
-      <Header/>
-      <Feelings/>
-      <Understanding/>
-      <Support/>
-      <Comments/>
-      <Feedback/>
+    <Router>
+      <div className='App'>
+        <Route path="/" exact>
+          <Header />
+          <Feelings />
+        </Route>
 
-    </div>
+        <Route path="/Support">
+          <Header />
+          <Feelings />
+        </Route>
+
+        <Route path="/Understanding">
+          <Header/>
+        <Understanding />
+        </Route>
+
+        <Route path="/Support">
+          <Header />
+        <Support />
+        </Route>
+
+        <Route path="/Comments">
+          <Header />
+        <Comments />
+        </Route>
+
+        <Route path="/Feedback">
+        <Feedback />
+        </Route>
+
+      </div>
+    </Router>
   );
 }
 
