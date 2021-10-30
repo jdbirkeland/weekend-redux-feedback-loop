@@ -43,7 +43,6 @@ function Comments() {
                 >
                     <TextField id="standard-basic" label="Standard" variant="standard"
                         onChange={(event) => setNewComments(event.target.value)}
-
                     />
                 </Box>
                 <Button type="submit" variant="contained">Next</Button>

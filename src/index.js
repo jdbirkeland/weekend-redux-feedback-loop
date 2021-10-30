@@ -10,8 +10,8 @@ import logger from 'redux-logger';
 const example = {
     feelings: "",
     understanding: "",
-    // support: "",
-    // comments: "",
+    support: "",
+    comments: "",
 };
 
 const formReducer = (state = example, action) => {
@@ -22,8 +22,8 @@ const formReducer = (state = example, action) => {
         return {...state,understanding: action.payload};
     } else if (action.type === 'SET_SUPPORT') {
         return {...state,support: action.payload};
-    } else if (action.type === 'SET_COMMENT') {
-        return {...state,comment: action.payload};
+    } else if (action.type === 'SET_COMMENTS') {
+        return {...state,comments: action.payload};
     }
     return state;
 };
