@@ -2,6 +2,7 @@ import Button from '@mui/material/Button';
 import { TextField } from '@mui/material';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import {useSelector, useDispatch} from 'react-redux';
 
 function Comments() {
     const [newComments, setNewComments] = useState({

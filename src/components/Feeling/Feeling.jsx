@@ -34,7 +34,7 @@ function Feelings() {
 
     console.log('newFeelings', newFeelings);
 
-    // const [value, setValue] = React.useState(2);
+    const [value, setValue] = React.useState(2);
     return (
         <div>
         <h2>How are you feeling today?</h2>
@@ -48,7 +48,7 @@ function Feelings() {
         name="simple-controlled"
         value={newFeelings}
         onChange={(event, newFeelings) => {
-          setNewFeelings(...newFeelings);
+          setNewFeelings(newFeelings);
         }}
         />
         </Box>

@@ -5,6 +5,7 @@ import App from './components/App/App';
 import { Provider } from 'react-redux';
 import {createStore, applyMiddleware, combineReducers} from 'redux';
 import registerServiceWorker from './registerServiceWorker';
+import logger from 'redux-logger';
 
 const feeling = (state = {}, action) => {
     if (action.type === 'SET_FEELING') {
@@ -18,9 +19,9 @@ const feeling = (state = {}, action) => {
 const store = createStore(
     combineReducers({
         feeling,
-        support,
-        comments,
-        understanding,
+        // support,
+        // comments,
+        // understanding,
     }),
     applyMiddleware(logger)
 );
@@ -32,3 +33,4 @@ ReactDOM.render(
 
 document.getElementById('root'));
 registerServiceWorker();
+ 
