@@ -24,7 +24,7 @@ function Comments() {
             newComments: newComments,
         });
 
-        // history.push(`/feedback`);
+        history.push(`/feedback`);
     };
 
     console.log('newComments', newComments);

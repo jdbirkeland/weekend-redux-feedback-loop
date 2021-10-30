@@ -27,7 +27,7 @@ function Understanding() {
             newUnderstanding: newUnderstanding,
         });
 
-        // history.push(`/feedback`);
+        history.push(`/Comments`);
     };
 
     console.log('newUnderstanding', newUnderstanding);

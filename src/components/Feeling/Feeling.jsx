@@ -5,7 +5,7 @@ import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 
 function Feelings() {
@@ -27,7 +27,7 @@ function Feelings() {
             newFeelings: newFeelings,
         });
 
-        // history.push(`/Feedback`);
+        history.push(`/Support`);
     };
 
     console.log('newFeelings', newFeelings);

@@ -22,7 +22,7 @@ function App() {
 
         <Route path="/Support">
           <Header />
-          <Feelings />
+          <Support />
         </Route>
 
         <Route path="/Understanding">
@@ -30,10 +30,10 @@ function App() {
         <Understanding />
         </Route>
 
-        <Route path="/Support">
+        {/* <Route path="/Support">
           <Header />
         <Support />
-        </Route>
+        </Route> */}
 
         <Route path="/Comments">
           <Header />

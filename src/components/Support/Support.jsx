@@ -11,7 +11,7 @@ function Support() {
 
     const [newSupport, setNewSupport] = useState('');
 
-    // const history = useHistory();
+    const history = useHistory();
     const dispatch = useDispatch();
 
     const handleSubmit = (event) => {
@@ -26,7 +26,7 @@ function Support() {
             support: '',
         });
 
-        // history.push(`/feedback`);
+        history.push(`/Understanding`);
     };
 
     console.log('newSupport', newSupport);
