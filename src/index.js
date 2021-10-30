@@ -9,28 +9,28 @@ import logger from 'redux-logger';
 
 const example = {
     feelings: "",
-    // understanding: "",
+    understanding: "",
     // support: "",
     // comments: "",
 };
 
-const fromReducer = (state = example, action) => {
+const formReducer = (state = example, action) => {
 
-    if (action.type === 'SET_FEELING') {
-        return {...state,...action.payload};
+    if (action.type === 'SET_FEELINGS') {
+        return {...state, feelings: action.payload};
     } else if (action.type === 'SET_UNDERSTANDING') {
-        return {...state,...action.payload};
+        return {...state,understanding: action.payload};
     } else if (action.type === 'SET_SUPPORT') {
-        return {...state,...action.payload};
+        return {...state,support: action.payload};
     } else if (action.type === 'SET_COMMENT') {
-        return {...state,...action.payload};
+        return {...state,comment: action.payload};
     }
     return state;
 };
 
 const store = createStore(
     combineReducers({
-        feeling,
+        formReducer,
         // support,
         // comments,
         // understanding,

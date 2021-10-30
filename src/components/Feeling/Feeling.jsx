@@ -32,26 +32,24 @@ function Feelings() {
 
     console.log('newFeelings', newFeelings);
 
-    // const [value, setValue] = React.useState(2);
     return (
         <div>
-        <form onSubmit={(event) => handleSubmit(event)}>
-        <h2>How are you feeling today?</h2>
-        <Box
-      sx={{
-        '& > legend': { mt: 2 },
-      }}
-    >
-      <Typography component="legend">Feeling?</Typography>
-      <Rating
-        name="simple-controlled"
-        value={newFeelings}
-        onChange={(event) => setNewFeelings(event.target.value)}
-        
-        />
-        </Box>
-        <Button type="submit" variant="contained">Next</Button>
-        </form>
+            <form onSubmit={(event) => handleSubmit(event)}>
+                <h2>How are you feeling today?</h2>
+                <Box
+                    sx={{
+                        '& > legend': { mt: 2 },
+                    }}
+                >
+                    <Typography component="legend">Feeling?</Typography>
+                    <Rating
+                        name="simple-controlled"
+                        value={newFeelings}
+                        onChange={(event) => setNewFeelings(event.target.value)}
+                    />
+                </Box>
+                <Button type="submit" variant="contained">Next</Button>
+            </form>
         </div>
     );
 }

@@ -9,11 +9,9 @@ import { useHistory } from 'react-router-dom';
 
 function Support() {
 
-    const [newSupport, setNewSupport] = useState({
-        support: '',
-    });
+    const [newSupport, setNewSupport] = useState('');
 
-    const history = useHistory();
+    // const history = useHistory();
     const dispatch = useDispatch();
 
     const handleSubmit = (event) => {
@@ -28,30 +26,29 @@ function Support() {
             support: '',
         });
 
-        history.push(`/feedback`);
+        // history.push(`/feedback`);
     };
 
     console.log('newSupport', newSupport);
 
-    const [value, setValue] = React.useState(2);
     return (
         <div>
-        <h2>How well are you being supported?</h2>
-        <Box
-      sx={{
-        '& > legend': { mt: 2 },
-      }}
-    >
-      <Typography component="legend">Support?</Typography>
-      <Rating
-        name="simple-controlled"
-        value={newSupport}
-        onChange={(event, newSupport) => {
-          setNewSupport(newSupport);
-        }}
-        />
-        </Box>
-        <Button variant="contained">Next</Button>
+            <form onSubmit={(event) => handleSubmit(event)}>
+                <h2>How well are you being supported?</h2>
+                <Box
+                    sx={{
+                        '& > legend': { mt: 2 },
+                    }}
+                >
+                    <Typography component="legend">Support?</Typography>
+                    <Rating
+                        name="simple-controlled"
+                        value={newSupport}
+                        onChange={(event) => setNewSupport(event.target.value)}
+                    />
+                </Box>
+                <Button type="submit" variant="contained">Next</Button>
+            </form>
         </div>
     );
 }

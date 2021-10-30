@@ -10,13 +10,7 @@ function Feedback() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    const [currentFeedback, setCurrentFeedback] = useState({
-        feelings: feeling.feelings,
-        // support: support.support,
-    });
-
-    console.log('feeling', feeling);
-    console.log('currentFeedback', currentFeedback);
+    // console.log('currentFeedback', currentFeedback);
 
     // const handleFeedback = () => {
     //     const confirmation = confirm('Are you sure you want to submit?');
@@ -39,16 +33,10 @@ function Feedback() {
                
 
                 <div>
-                Feelings: tbd
-                <br />
-                <br />
-                Understanding: tdb
-                <br />
-                <br />
-                Support: tbd
-                <br />
-                <br />
-                Comments: tbd
+                <p>Feelings: {feedback.feelings}</p>
+                <p>Understanding: {feedback.understanding}</p>
+                <p>Support: {feedback.support}</p>
+                <p>Comments: {feedback.comments}</p>
                 </div>
 
 

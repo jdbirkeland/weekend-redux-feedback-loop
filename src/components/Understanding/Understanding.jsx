@@ -10,9 +10,7 @@ import { useHistory } from 'react-router-dom';
 
 function Understanding() {
 
-    const [newUnderstanding, setNewUnderstanding] = useState({
-        understanding: '',
-    });
+    const [newUnderstanding, setNewUnderstanding] = useState('');
 
     const history = useHistory();
     const dispatch = useDispatch();
@@ -26,32 +24,32 @@ function Understanding() {
         });
 
         setNewUnderstanding({
-            understanding: '',
+            newUnderstanding: newUnderstanding,
         });
 
-        history.push(`/feedback`);
+        // history.push(`/feedback`);
     };
 
     console.log('newUnderstanding', newUnderstanding);
 
     return (
         <div>
-        <h2>How well are you understanding the content?</h2>
-        <Box
-      sx={{
-        '& > legend': { mt: 2 },
-      }}
-    >
-      <Typography component="legend">Understanding?</Typography>
-      <Rating
-        name="simple-controlled"
-        value={newUnderstanding}
-        onChange={(event, newUnderstanding) => {
-          setNewUnderstanding(newUnderstanding);
-        }}
-        />
-        </Box>
-        <Button variant="contained">Next</Button>
+            <form onSubmit={(event) => handleSubmit(event)}>
+                <h2>How well are you understanding the content?</h2>
+                <Box
+                    sx={{
+                        '& > legend': { mt: 2 },
+                    }}
+                >
+                    <Typography component="legend">Understanding?</Typography>
+                    <Rating
+                        name="simple-controlled"
+                        value={newUnderstanding}
+                        onChange={(event) => setNewUnderstanding(event.target.value)}
+                    />
+                </Box>
+                <Button type="submit" variant="contained">Next</Button>
+            </form>
         </div>
     );
 }
