@@ -3,8 +3,36 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
+import { useSelector, useDispatch } from 'react-redux';
+import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 function Support() {
+
+    const [newSupport, setNewSupport] = useState({
+        support: '',
+    });
+
+    const history = useHistory();
+    const dispatch = useDispatch();
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        dispatch({
+            type: 'SET_SUPPORT',
+            payload: newSupport,
+        });
+
+        setNewSupport({
+            support: '',
+        });
+
+        history.push(`/feedback`);
+    };
+
+    console.log('newSupport', newSupport);
+
     const [value, setValue] = React.useState(2);
     return (
         <div>
@@ -17,9 +45,9 @@ function Support() {
       <Typography component="legend">Support?</Typography>
       <Rating
         name="simple-controlled"
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
+        value={newSupport}
+        onChange={(event, newSupport) => {
+          setNewSupport(newSupport);
         }}
         />
         </Box>
