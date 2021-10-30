@@ -29,7 +29,7 @@ function Feelings() {
             feelings: '',
         });
 
-        history.push(`/feedback`);
+        history.push(`/Feedback`);
     };
 
     console.log('newFeelings', newFeelings);
