@@ -10,9 +10,7 @@ import { useHistory } from 'react-router-dom';
 
 function Feelings() {
 
-    const [newFeelings, setNewFeelings] = useState({
-        feelings: '',
-    });
+    const [newFeelings, setNewFeelings] = useState('');
 
     const history = useHistory();
     const dispatch = useDispatch();
@@ -26,17 +24,18 @@ function Feelings() {
         });
 
         setNewFeelings({
-            feelings: '',
+            newFeelings: newFeelings,
         });
 
-        history.push(`/Feedback`);
+        // history.push(`/Feedback`);
     };
 
     console.log('newFeelings', newFeelings);
 
-    const [value, setValue] = React.useState(2);
+    // const [value, setValue] = React.useState(2);
     return (
         <div>
+        <form onSubmit={(event) => handleSubmit(event)}>
         <h2>How are you feeling today?</h2>
         <Box
       sx={{
@@ -47,12 +46,12 @@ function Feelings() {
       <Rating
         name="simple-controlled"
         value={newFeelings}
-        onChange={(event, newFeelings) => {
-          setNewFeelings(newFeelings);
-        }}
+        onChange={(event) => setNewFeelings(event.target.value)}
+        
         />
         </Box>
-        <Button variant="contained">Next</Button>
+        <Button type="submit" variant="contained">Next</Button>
+        </form>
         </div>
     );
 }

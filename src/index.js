@@ -7,11 +7,23 @@ import {createStore, applyMiddleware, combineReducers} from 'redux';
 import registerServiceWorker from './registerServiceWorker';
 import logger from 'redux-logger';
 
-const feeling = (state = {}, action) => {
+const example = {
+    feelings: "",
+    // understanding: "",
+    // support: "",
+    // comments: "",
+};
+
+const fromReducer = (state = example, action) => {
+
     if (action.type === 'SET_FEELING') {
-        return action.payload;
-    } else if (action.type === 'RESET') {
-        return {};
+        return {...state,...action.payload};
+    } else if (action.type === 'SET_UNDERSTANDING') {
+        return {...state,...action.payload};
+    } else if (action.type === 'SET_SUPPORT') {
+        return {...state,...action.payload};
+    } else if (action.type === 'SET_COMMENT') {
+        return {...state,...action.payload};
     }
     return state;
 };

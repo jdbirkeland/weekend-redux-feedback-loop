@@ -2,18 +2,34 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
 import { useState } from 'react';
 import axios from 'axios';
+import { tableBodyClasses } from '@mui/material';
 
 function Feedback() {
-    const feeling = useSelector((store) => store.feeling);
+    const feedback = useSelector((store) => store.formReducer);
 
     const history = useHistory();
     const dispatch = useDispatch();
 
     const [currentFeedback, setCurrentFeedback] = useState({
         feelings: feeling.feelings,
+        // support: support.support,
     });
 
+    console.log('feeling', feeling);
     console.log('currentFeedback', currentFeedback);
+
+    // const handleFeedback = () => {
+    //     const confirmation = confirm('Are you sure you want to submit?');
+
+
+    //     if (confirmation) {
+    //         axios({
+    //             method: `POST`,
+    //             url: tableBodyClasses,
+    //             data: 
+    //         })
+    //     }
+    // }
 
     return (
         <>
@@ -23,7 +39,7 @@ function Feedback() {
                
 
                 <div>
-                Feelings: {currentFeedback.feelings}
+                Feelings: tbd
                 <br />
                 <br />
                 Understanding: tdb
