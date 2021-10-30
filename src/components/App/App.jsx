@@ -8,6 +8,8 @@ import Support from '../Support/Support';
 import Understanding from '../Understanding/Understanding';
 import Feedback from '../Feedback/Feedback';
 import { Route, HashRouter as Router, Link } from 'react-router-dom';
+import LastPage from '../LastPage/LastPage';
+
 
 
 function App() {
@@ -26,8 +28,8 @@ function App() {
         </Route>
 
         <Route path="/Understanding">
-          <Header/>
-        <Understanding />
+          <Header />
+          <Understanding />
         </Route>
 
         {/* <Route path="/Support">
@@ -37,11 +39,15 @@ function App() {
 
         <Route path="/Comments">
           <Header />
-        <Comments />
+          <Comments />
         </Route>
 
         <Route path="/Feedback">
-        <Feedback />
+          <Feedback />
+        </Route>
+
+        <Route path="/LastPage">
+          <LastPage />
         </Route>
 
       </div>
