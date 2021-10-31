@@ -28,6 +28,7 @@ function Feelings() {
         });
 
         history.push(`/Support`);
+
     };
 
     console.log('newFeelings', newFeelings);

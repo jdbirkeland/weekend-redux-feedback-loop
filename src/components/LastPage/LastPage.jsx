@@ -14,11 +14,10 @@ function LastPage() {
         <>
 
         <div className="avatar" style={{
-    width: '20px',
-    height: '400px',
-    paddingLeft: '500px',
-    margin: '5px',
-    // textAlign: 'center'
+    height: '450px',
+    paddingLeft: '640px',
+    paddingTop: '50px'
+    
    }}>
             <Avatar
                 alt="Jacob Birkeland"
@@ -26,8 +25,6 @@ function LastPage() {
                 sx={{ width: 246, height: 396 }}
             />
             </div>
-            {/* <h1>FeedBack</h1> */}
-
 
             <h1>Thank You!</h1>
 
