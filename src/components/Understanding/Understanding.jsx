@@ -44,6 +44,7 @@ function Understanding() {
                     <Typography component="legend">Understanding?</Typography>
                     <Rating
                         name="simple-controlled"
+                        type="number" require min="1"
                         value={newUnderstanding}
                         onChange={(event) => setNewUnderstanding(event.target.value)}
                     />

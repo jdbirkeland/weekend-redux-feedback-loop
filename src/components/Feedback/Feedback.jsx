@@ -11,12 +11,17 @@ function Feedback() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
+    const handleFeedback = () => {
 
-    //     history.push(`/LastPage`);
-    // };
-
+        axios.post('/api/feedback', feedback)
+        .then(response => {
+            console.log('POSTED');
+            dispatch({type:'CLEAR_FEEDBACK'});
+            history.push('/')
+        }).catch(err => {
+            console.log('error in POST');
+        })
+    }
 
     return (
         <>
@@ -46,17 +51,3 @@ function Feedback() {
 
 export default Feedback;
 
-    // console.log('currentFeedback', currentFeedback);
-
-    // const handleFeedback = () => {
-    //     const confirmation = confirm('Are you sure you want to submit?');
-
-
-    //     if (confirmation) {
-    //         axios({
-    //             method: `POST`,
-    //             url: tableBodyClasses,
-    //             data: 
-    //         })
-    //     }
-    // }

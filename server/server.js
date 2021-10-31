@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
-const feedbackRouter = require('.routes/file.route.js');
+const feedbackRouter = require('./routes/file.route.js');
 app.use('/api/feedback', feedbackRouter);
 
 /** ---------- START SERVER ---------- **/

@@ -44,7 +44,7 @@ function Feelings() {
                     <Typography component="legend">Feeling?</Typography>
                     <Rating
                         name="simple-controlled"
-                        // type="number" require min="1"
+                        type="number" require min="1"
                         value={newFeelings}
                         onChange={(event) => setNewFeelings(event.target.value)}
                     />

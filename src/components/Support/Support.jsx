@@ -43,6 +43,7 @@ function Support() {
                     <Typography component="legend">Support?</Typography>
                     <Rating
                         name="simple-controlled"
+                        type="number" require min="1"
                         value={newSupport}
                         onChange={(event) => setNewSupport(event.target.value)}
                     />

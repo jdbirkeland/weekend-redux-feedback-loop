@@ -3,6 +3,8 @@ import { useHistory } from 'react-router';
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
+import './LastPage.css';
+import { textAlign } from '@mui/system';
 
 function LastPage() {
 
@@ -11,16 +13,21 @@ function LastPage() {
     return (
         <>
 
-            <header>
-                <Avatar
-                    alt="Jacob Birkeland"
-                    src="/images/avatar/jacobpic.jpg"
-                    sx={{ width: 246, height: 396 }}
-                    style={{ alignSelf: 'center' }}
+        <div className="avatar" style={{
+    width: '20px',
+    height: '400px',
+    paddingLeft: '500px',
+    margin: '5px',
+    // textAlign: 'center'
+   }}>
+            <Avatar
+                alt="Jacob Birkeland"
+                src="/images/avatar/jacobpic.jpg"
+                sx={{ width: 246, height: 396 }}
+            />
+            </div>
+            {/* <h1>FeedBack</h1> */}
 
-                />
-                {/* <h1>FeedBack</h1> */}
-            </header>
 
             <h1>Thank You!</h1>
 
