@@ -5,25 +5,28 @@ import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 
 function LastPage() {
-return(
-    <>
 
-<header>
-<Avatar 
-alt="Jacob Birkeland" 
-src="/images/avatar/jacobpic.jpg"
-sx={{ width: 246, height: 396 }}
-style={{alignSelf: 'center'}}
+    const history = useHistory();
 
- />
-        {/* <h1>FeedBack</h1> */}
-    </header>
+    return (
+        <>
 
-<h1>Thank You!</h1>
+            <header>
+                <Avatar
+                    alt="Jacob Birkeland"
+                    src="/images/avatar/jacobpic.jpg"
+                    sx={{ width: 246, height: 396 }}
+                    style={{ alignSelf: 'center' }}
 
-<Button onClick={() => history.push(`/Feelings`)} type="submit" variant="contained">Leave New Feedback</Button>
-</>
-);
+                />
+                {/* <h1>FeedBack</h1> */}
+            </header>
+
+            <h1>Thank You!</h1>
+
+            <Button onClick={() => history.push(`/`)} type="submit" variant="contained">Leave New Feedback</Button>
+        </>
+    );
 }
 
 
