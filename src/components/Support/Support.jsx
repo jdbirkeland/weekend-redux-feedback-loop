@@ -17,6 +17,13 @@ function Support() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
+        if (!newSupport || newSupport < 0 || newSupport > 5) {
+            alert("Please select a feeling rating from 0 to 5 stars");
+            setNewSupport(0);
+            return false;
+        }
+
+
         dispatch({
             type: 'SET_SUPPORT',
             payload: newSupport,

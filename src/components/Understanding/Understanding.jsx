@@ -18,6 +18,13 @@ function Understanding() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
+        if (!newUnderstanding || newUnderstanding < 0 || newUnderstanding > 5) {
+            alert("Please select a feeling rating from 0 to 5 stars");
+            setNewUnderstanding(0);
+            return false;
+        }
+
+
         dispatch({
             type: 'SET_UNDERSTANDING',
             payload: newUnderstanding,

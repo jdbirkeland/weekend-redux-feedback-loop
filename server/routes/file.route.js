@@ -22,7 +22,7 @@ router.post('/', (req, res) => {
                res.sendStatus(201);
            }).cather(err => {
                colsole.log('POST ERR', err);
-               res.sendStatus(400);
+               res.sendStatus(500);
            });
         })
 

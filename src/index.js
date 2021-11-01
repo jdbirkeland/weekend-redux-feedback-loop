@@ -24,7 +24,10 @@ const formReducer = (state = example, action) => {
         return {...state,support: action.payload};
     } else if (action.type === 'SET_COMMENTS') {
         return {...state,comments: action.payload};
+    } else if(action.type === 'CLEAR_FEEDBACK') {
+        return example;
     }
+
     return state;
 };
 

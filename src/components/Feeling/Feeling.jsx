@@ -18,9 +18,16 @@ function Feelings() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
+        if (!newFeelings || newFeelings < 0 || newFeelings > 5) {
+            alert("Please select a feeling rating from 0 to 5 stars");
+            setNewFeelings(0);
+            return false;
+        }
+
+
         dispatch({
             type: 'SET_FEELINGS',
-            payload: newFeelings,
+            payload: Number(newFeelings),
         });
 
         setNewFeelings({
