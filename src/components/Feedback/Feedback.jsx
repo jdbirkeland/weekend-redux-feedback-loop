@@ -22,7 +22,7 @@ function Feedback() {
         }).then((response) => {
             console.log('POSTED');
             // dispatch({type:'CLEAR_FEEDBACK'});
-            history.push('/')
+            history.push('/LastPage')
         }).catch(err => {
             console.log('error in POST')
             // res.sendStatus(500);
