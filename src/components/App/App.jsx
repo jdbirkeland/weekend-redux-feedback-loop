@@ -10,8 +10,6 @@ import Feedback from '../Feedback/Feedback';
 import { Route, HashRouter as Router, Link } from 'react-router-dom';
 import LastPage from '../LastPage/LastPage';
 
-
-
 function App() {
 
   return (
@@ -31,11 +29,6 @@ function App() {
           <Header />
           <Understanding />
         </Route>
-
-        {/* <Route path="/Support">
-          <Header />
-        <Support />
-        </Route> */}
 
         <Route path="/Comments">
           <Header />

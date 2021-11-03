@@ -15,7 +15,7 @@ function LastPage() {
 
         <div className="avatar" style={{
     height: '450px',
-    paddingLeft: '450px',
+    paddingLeft: '500px',
     paddingTop: '50px'
     
    }}>

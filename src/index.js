@@ -8,10 +8,12 @@ import registerServiceWorker from './registerServiceWorker';
 import logger from 'redux-logger';
 
 const example = {
-    feelings: "",
-    understanding: "",
-    support: "",
+    feelings: 0,
+    understanding: 0,
+    support: 0,
     comments: "",
+    flagged: false,
+    date: ""
 };
 
 const formReducer = (state = example, action) => {

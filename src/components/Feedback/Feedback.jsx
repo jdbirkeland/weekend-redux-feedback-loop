@@ -11,15 +11,21 @@ function Feedback() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    const handleFeedback = () => {
+    const handleFeedback = (event) => {
 
-        axios.post('/api/feedback', feedback)
-        .then(response => {
+        console.log(feedback);
+
+        axios({
+            method:'POST',
+            url: '/feedback',
+            data: feedback,
+        }).then((response) => {
             console.log('POSTED');
-            dispatch({type:'CLEAR_FEEDBACK'});
+            // dispatch({type:'CLEAR_FEEDBACK'});
             history.push('/')
         }).catch(err => {
-            console.log('error in POST');
+            console.log('error in POST')
+            // res.sendStatus(500);
         })
     }
 
@@ -41,7 +47,7 @@ function Feedback() {
                 </h2>
 
                 <div>
-                    <Button onClick={() => history.push(`/LastPage`)} type="submit" variant="contained">Submit</Button>
+                    <Button onClick={handleFeedback} type="submit" variant="contained">Submit</Button>
                 </div>
 
             </div>
